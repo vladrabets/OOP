@@ -1,0 +1,5 @@
+﻿  Source.cpp
+  String.cpp
+  Создание кода...
+D:\++\OOP\Laba2Rabets\String.cpp(91): warning C4715: String::operator[]: значение возвращается не при всех путях выполнения
+  Laba2Rabets.vcxproj -> D:\++\OOP\Laba2Rabets\x64\Debug\Laba2Rabets.exe

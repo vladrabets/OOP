@@ -1,0 +1,2 @@
+D:\++\OOP\Laba2Rabets\x64\Debug\Laba2Rabets.exe
+D:\++\OOP\Laba2Rabets\x64\Debug\Laba2Rabets.pdb
