@@ -1,0 +1,2 @@
+D:\++\OOP\Laba3Rabets\Debug\Laba3Rabets.exe
+D:\++\OOP\Laba3Rabets\Debug\Laba3Rabets.pdb
