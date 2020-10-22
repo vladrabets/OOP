@@ -1,5 +1,6 @@
 #include"List.h"
 #include<iostream>
+#define MININT int(-2147483647)
 using namespace std;
 
 List::List()
@@ -90,6 +91,7 @@ void List::selectSort() {
 }
 
 void List::insertSort() {
+	/*
 	int l = this->listLen();
 	Node* key = head;
 	Node* p = head;
@@ -104,7 +106,7 @@ void List::insertSort() {
 		if(j!=0)
 		   for (int k = 0; k < j; k++)
 		      key = key->next;
-			  */
+			  
 
 	while (p->next != NULL) {
 		
@@ -117,7 +119,7 @@ void List::insertSort() {
 			p->next = temp2->next;
 			Node* o = head;
 			Node* temp3 = o;
-			while ((o->next != NULL) && (temp2->value < o->value))
+			while ((o->next != NULL) && (temp2->value > o->value))
 			{
 				temp3 = o;
 				o = o->next;
@@ -125,7 +127,44 @@ void List::insertSort() {
 			temp3->next = temp2;
 			temp2->next = o;
 		}
+		
 	}
 
 	 //}
+	 
+	*/
+	
+		Node* p = head;
+		Node* res = NULL;
+		Node* ins = NULL;
+
+		ins = new Node;
+		ins->value = MININT;
+		ins->next = NULL;
+		res = ins;
+		while (p != NULL) {
+			Node* tempp = NULL;
+			bool flag = true;
+			while (ins->next != NULL) {
+				if ((ins->value <= p->value) && (ins->next->value >= p->value)) {
+					tempp = p->next;
+					p->next = ins->next;
+					ins->next = p;
+					flag = false;
+					break;
+				}
+				ins = ins->next;
+			};
+			if (flag) {
+				tempp = p->next;
+				p->next = ins->next;
+				ins->next = p;
+			};
+
+			p = tempp;
+			ins = res;
+		};
+		head = res->next;
+	
+
 }
