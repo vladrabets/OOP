@@ -7,6 +7,7 @@ using namespace std;
 int main() {
 	
 	string n;
+
 	int w;
 	cout << "Input your dog's name:\n";
 	cin >> n;
