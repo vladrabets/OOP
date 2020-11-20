@@ -35,3 +35,21 @@ void Cat::voice() {
 void Parrot::voice() {
 	cout << "Scrrr!\n";
 }
+
+
+std::istream& operator>> (std::istream& in, Pet& pet) {
+
+	printf("Input values:\n");
+	in >> pet.name;
+	in >> pet.weight;
+
+	return in;
+}
+
+ostream& operator<< (ostream& out, const Pet& pet)
+{
+	// Поскольку operator<< является другом класса Point, то мы имеем прямой доступ к членам Point
+	out << "Name: " << pet.name << "\nSpecies: " << pet.species << "\nWeight: " << pet.weight << "\n";
+
+	return out;
+}

@@ -27,6 +27,7 @@ int main() {
 	cin >> w;
 	Parrot P(n, w);
 	
+	/*
 	cout << "Dog voice:\n";
 	D.voice();
 	cout << "Information about dog:\n";
@@ -47,7 +48,11 @@ int main() {
 	P.printSpecies(); cout << "\n";
 	P.printName(); cout << "\n";
 	cout << "Parrot's weight: " << P.getWeight() << "\n\n";
+	*/
 
+	cout << D;
+	cin >> D;
+	cout << D;
 
 	return 0;
 }
